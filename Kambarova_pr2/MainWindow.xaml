@@ -1,0 +1,61 @@
+﻿<Window x:Class="Kambarova_pr2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kambarova_pr2"
+        mc:Ignorable="d"
+        Title="Calculator Kambarova" Height="450" Width="350" MinHeight="450" MinWidth="350" MaxHeight="900" MaxWidth="700" Background="LightYellow">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="ExpressionTextBox" Grid.Row="0" Margin="0,0,0,10" FontSize="18" TextAlignment="Right" IsReadOnly="True" Background="LemonChiffon" Padding="10"/>
+        <TextBox x:Name="ResultTextBox" Grid.Row="1" Margin="0,10,0,10" FontSize="24" FontWeight="Bold" TextAlignment="Right" IsReadOnly="True" Background="White" Padding="10"/>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="knopka_C" Content="C" Grid.Row="0" Grid.Column="0" FontSize="28" Click="CButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_skobka1" Content="(" Grid.Row="0" Grid.Column="1" FontSize="28" Click="SkobkaButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_skobka2" Content=")" Grid.Row="0" Grid.Column="2" FontSize="28" Click="SkobkaButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_multiplication" Content="*" Grid.Row="0" Grid.Column="3" FontSize="28" Click="OperatorButton_Click" Background="LightGoldenrodYellow"/>
+
+            <Button x:Name="knopka1" Content="1" Grid.Row="1" Grid.Column="0" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka2" Content="2" Grid.Row="1" Grid.Column="1" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka3" Content="3" Grid.Row="1" Grid.Column="2" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_delenie" Content="/" Grid.Row="1" Grid.Column="3" FontSize="28" Click="OperatorButton_Click" Background="LightGoldenrodYellow"/>
+
+            <Button x:Name="knopka4" Content="4" Grid.Row="2" Grid.Column="0" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka5" Content="5" Grid.Row="2" Grid.Column="1" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka6" Content="6" Grid.Row="2" Grid.Column="2" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_minus" Content="-" Grid.Row="2" Grid.Column="3" FontSize="28" Click="OperatorButton_Click" Background="LightGoldenrodYellow"/>
+
+            <Button x:Name="knopka7" Content="7" Grid.Row="3" Grid.Column="0" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka8" Content="8" Grid.Row="3" Grid.Column="1" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka9" Content="9" Grid.Row="3" Grid.Column="2" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_plus" Content="+" Grid.Row="3" Grid.Column="3" FontSize="28" Click="OperatorButton_Click" Background="LightGoldenrodYellow"/>
+
+            <Button x:Name="knopka_tochka" Content="." Grid.Row="4" Grid.Column="0" FontSize="28" Click="TochkaButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka0" Content="0" Grid.Row="4" Grid.Column="1" FontSize="28" Click="NumberButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_stepen" Content="^" Grid.Row="4" Grid.Column="2" FontSize="28" Click="OperatorButton_Click" Background="LightGoldenrodYellow"/>
+            <Button x:Name="knopka_ravno" Content="=" Grid.Row="4" Grid.Column="3" FontSize="28" Click="RavnoButton_Click" Background="LightGoldenrodYellow"/>
+        </Grid>
+    </Grid>
+</Window>
